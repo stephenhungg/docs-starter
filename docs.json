@@ -1,72 +1,85 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Hyper",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8a6f68",
+    "light": "#e8d8d7",
+    "dark": "#8f7168"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "architecture",
+              "mcp",
+              "deployment"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Backend API",
+        "groups": [
+          {
+            "group": "Core",
+            "pages": [
+              "api/onboarding",
+              "api/data",
+              "api/connectors",
+              "api/storage"
+            ]
+          },
+          {
+            "group": "Accounting engine",
+            "pages": [
+              "api/accounting",
+              "api/posting",
+              "api/anomalies",
+              "api/adapters",
+              "api/settlement",
+              "api/accrual"
+            ]
+          },
+          {
+            "group": "Agents",
+            "pages": [
+              "api/agents",
+              "api/concerns",
+              "api/artifacts",
+              "api/skills",
+              "api/world-agent"
+            ]
+          }
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "GitHub",
+          "icon": "github",
+          "href": "https://github.com/MatthewKim323/hyper."
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open Hyper",
+      "href": "https://hyper.stephenhung.me"
     }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/MatthewKim323/hyper."
     }
   }
 }

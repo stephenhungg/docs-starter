@@ -1,33 +1,21 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
-
 # Documentation project instructions
 
-## About this project
+This repository is the published Mintlify site for Hyper. Pages are MDX with YAML frontmatter
+and configuration lives in `docs.json`.
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
-- Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
+## Where content comes from
 
-## Terminology
+Pages under `api/` are generated from the Markdown specs in the product repo by `docs/sync.py`.
+Editing them here is a dead end: the next sync overwrites the change. Fix the spec in the
+product repo instead and re-run the generator.
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+The four guides at the root — `index`, `architecture`, `mcp`, `deployment` — are written by hand
+and are edited here.
 
-## Style preferences
+## Conventions
 
-{/* Add any project-specific style rules below */}
-
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
-
-## Content boundaries
-
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+- Say what the system does, not what it is going to do. Describe behaviour that exists.
+- An API page documents the route, its authorization, and what the caller is responsible for.
+- Code samples must be runnable as written. No placeholder hostnames where a real one is known.
+- Link with root-relative paths (`/api/accounting`), never `.md` file paths — those 404 once
+  Mintlify renders them.
